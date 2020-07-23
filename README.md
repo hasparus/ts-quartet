@@ -353,7 +353,7 @@ const checkPositiveNumbersArray = x => {
 From the validation function, it creates a schema.
 
 ```typescript
-function checkEven(x) {
+function isEven(x) {
   return x % 2 === 0
 }
 
@@ -365,7 +365,7 @@ const checkPositiveEvenNumber = v(v.and(v.number, v.positive, evenSchema))
 const checkPositiveEvenNumber = x => {
   if (typeof x !== 'number') return false
   if (x <= 0) return false
-  if (!checkEven(x)) return false
+  if (!isEven(x)) return false
   return true
 }
 ```
